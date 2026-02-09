@@ -1,0 +1,94 @@
+document.addEventListener('DOMContentLoaded', () => {
+    // Mobile Menu Toggle
+    const mobileMenuBtn = document.getElementById('mobile-menu');
+    const navbar = document.getElementById('navbar');
+
+    mobileMenuBtn.addEventListener('click', () => {
+        navbar.classList.toggle('active');
+        const icon = mobileMenuBtn.querySelector('i');
+        if (navbar.classList.contains('active')) {
+            icon.classList.remove('fa-bars');
+            icon.classList.add('fa-xmark');
+        } else {
+            icon.classList.remove('fa-xmark');
+            icon.classList.add('fa-bars');
+        }
+    });
+
+    // Close mobile menu when clicking a link
+    const navLinks = document.querySelectorAll('#navbar a');
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            if (navbar.classList.contains('active')) {
+                navbar.classList.remove('active');
+                const icon = mobileMenuBtn.querySelector('i');
+                icon.classList.remove('fa-xmark');
+                icon.classList.add('fa-bars');
+            }
+        });
+    });
+
+    // Smooth Scrolling for anchor links (polyfill support not strictly needed for modern browsers but good practice logic)
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            if (targetId === '#') return;
+
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+                // Account for fixed header offset
+                const headerOffset = 80;
+                const elementPosition = targetElement.getBoundingClientRect().top;
+                const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: "smooth"
+                });
+            }
+        });
+    });
+
+    // Navbar background change on scroll
+    const header = document.getElementById('main-header');
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+            header.style.boxShadow = "0 2px 10px rgba(0,0,0,0.1)";
+        } else {
+            header.style.boxShadow = "none";
+        }
+    });
+
+    // Intersection Observer for Fade-in Animations
+    const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('is-visible');
+                observer.unobserve(entry.target); // Only animate once
+            }
+        });
+    }, observerOptions);
+
+    document.querySelectorAll('section').forEach(section => {
+        section.classList.add('fade-in-section');
+        observer.observe(section);
+    });
+
+    // Simple Form Submission Handler (Prevent default for demo)
+    const contactForm = document.getElementById('contact-form');
+    if (contactForm) {
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            // Here you would typically send the data via AJAX or let Formspree handle it
+            alert('Obrigado pelo contato! Em breve retornaremos.');
+            contactForm.reset();
+        });
+    }
+});
