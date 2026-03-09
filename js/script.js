@@ -81,13 +81,23 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(section);
     });
 
-    // Simple Form Submission Handler (Prevent default for demo)
+    // Form Submission Handler (Redirect to WhatsApp)
     const contactForm = document.getElementById('contact-form');
     if (contactForm) {
         contactForm.addEventListener('submit', (e) => {
             e.preventDefault();
-            // Here you would typically send the data via AJAX or let Formspree handle it
-            alert('Obrigado pelo contato! Em breve retornaremos.');
+            
+            const name = document.getElementById('name').value;
+            const phone = document.getElementById('phone').value;
+            const typeSelect = document.getElementById('type');
+            const typeText = typeSelect.options[typeSelect.selectedIndex].text;
+            const message = document.getElementById('message').value;
+
+            const whatsappNumber = "5511917229110";
+            const text = `Olá, gostaria de falar sobre: ${typeText}\n\n*Nome:* ${name}\n*Telefone:* ${phone}\n*Mensagem:* ${message}`;
+            const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(text)}`;
+
+            window.open(whatsappUrl, '_blank');
             contactForm.reset();
         });
     }
