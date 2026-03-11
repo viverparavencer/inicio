@@ -54,9 +54,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const header = document.getElementById('main-header');
     window.addEventListener('scroll', () => {
         if (window.scrollY > 50) {
-            header.style.boxShadow = "0 2px 10px rgba(0,0,0,0.1)";
+            header.classList.add('scrolled');
         } else {
-            header.style.boxShadow = "none";
+            header.classList.remove('scrolled');
         }
     });
 
