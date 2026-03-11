@@ -1,16 +1,16 @@
 :root {
-    /* Premium Color Palette */
-    --primary-green: #147247; /* Rich, elegant green */
-    --primary-light: #22965f;
-    --secondary-blue: #0b5ed7; /* Trustworthy blue */
-    --accent-yellow: #f5b700;
+    /* V3 Premium Color Palette (Otimizada pelo Briefing) */
+    --primary-green: #2E7D32; /* Verde Esperança */
+    --primary-light: #388E3C;
+    --secondary-blue: #1565C0; /* Azul Confiança */
+    --accent-yellow: #FBC02D; /* Amarelo Destaque */
     
     --text-dark: #1f2937;
     --text-light: #4b5563;
     --text-muted: #9ca3af;
     --white: #ffffff;
     
-    --bg-light: #f9fafb; /* Off-white for premium feel */
+    --bg-light: #F5F5F5; /* Cinza claro oficial */
     --bg-accent: #f3f4f6;
     
     /* Layout & Animation Variables */
@@ -552,14 +552,17 @@ img {
 }
 
 /* Galeria */
-#estrutura {
+#comunidade-terapeutica {
     background-color: var(--bg-light);
 }
 
-.gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 25px;
+.structure-swiper {
+    padding-bottom: 50px; /* Space for pagination */
+    padding-top: 10px;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: var(--primary-green) !important;
 }
 
 .gallery-item {
@@ -570,7 +573,11 @@ img {
     border-radius: 12px;
     position: relative;
     overflow: hidden;
-    cursor: pointer;
+    cursor: grab;
+}
+
+.gallery-item:active {
+    cursor: grabbing;
 }
 
 .gallery-item::after {

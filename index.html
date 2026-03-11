@@ -4,28 +4,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Viver para Vencer – Comunidade Terapêutica</title>
+    <title>Comunidade Terapêutica Viver para Vencer | Tratamento Dependência Química</title>
     <!-- Favicon -->
     <link rel="icon" href="https://i.ibb.co/KjGckLXF/comunidade-terapeutica-viverpvencer.webp" type="image/x-icon">
     <meta name="description"
-        content="Comunidade Terapêutica Viver para Vencer. Internações voluntárias e involuntárias com acolhimento, espiritualidade e disciplina. Recomece agora.">
+        content="Clínica especializada em tratamento para dependência química e alcoolismo. Internações com acolhimento e estrutura segura.">
     
     <!-- Open Graph / Social Media Preview -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://comunidadedeviverparavencer.com.br/">
-    <meta property="og:title" content="Viver para Vencer – Comunidade Terapêutica">
-    <meta property="og:description" content="Internações voluntárias e involuntárias com acolhimento, espiritualidade e disciplina. Recomece agora.">
+    <meta property="og:title" content="Comunidade Terapêutica Viver para Vencer | Tratamento Dependência Química">
+    <meta property="og:description" content="Clínica especializada em tratamento para dependência química e alcoolismo. Internações com acolhimento e estrutura segura.">
     <meta property="og:image" content="https://i.ibb.co/KjGckLXF/comunidade-terapeutica-viverpvencer.webp">
-    <meta property="og:image:alt" content="Logo Viver para Vencer">
-
-    <meta property="og:image:alt" content="Logo Viver para Vencer">
+    <meta property="og:image:alt" content="Comunidade Terapêutica Tratamento Dependência Química">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css?v=2.0">
+    
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    
+    <link rel="stylesheet" href="css/style.css?v=3.0">
     <!-- FontAwesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Schema.org Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MedicalOrganization",
+      "name": "Comunidade Terapêutica Viver para Vencer",
+      "url": "https://comunidadedeviverparavencer.com.br/",
+      "logo": "https://i.ibb.co/KjGckLXF/comunidade-terapeutica-viverpvencer.webp",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+55-11-91722-9110",
+        "contactType": "customer support"
+      }
+    }
+    </script>
 </head>
 
 <body>
@@ -40,9 +58,9 @@
                 <ul>
                     <li><a href="#hero">Início</a></li>
                     <li><a href="#quem-somos">Quem Somos</a></li>
-                    <li><a href="#abordagem">Abordagem</a></li>
-                    <li><a href="#internacoes">Internações</a></li>
-                    <li><a href="#depoimentos">Depoimentos</a></li>
+                    <li><a href="#tratamento-dependencia-quimica">Tratamento</a></li>
+                    <li><a href="#internacao-involuntaria">Internação</a></li>
+                    <li><a href="#comunidade-terapeutica">Estrutura</a></li>
                     <li><a href="#contato" class="btn-nav">Fale Conosco</a></li>
                 </ul>
             </nav>
@@ -57,12 +75,13 @@
         <div class="hero-bg-anim"></div>
         <div class="hero-overlay"></div>
         <div class="container hero-content">
-            <h1>Recomeços começam com acolhimento e ação</h1>
-            <p>Comunidade Terapêutica especializada em internações voluntárias e involuntárias. O primeiro passo para
-                vencer é buscar ajuda.</p>
+            <h1>Viver para Vencer</h1>
+            <h2>Comunidade Terapêutica para Dependência<br>Química e Alcoolismo</h2>
+            <br>
+            <p>Tratamento com acolhimento, espiritualidade e disciplina para reconstruir vidas.</p>
             <div class="hero-buttons">
-                <a href="https://wa.me/5562996653772" target="_blank" class="btn btn-primary"><i class="fa-brands fa-whatsapp"></i> Ajuda Agora</a>
-                <a href="#abordagem" class="btn btn-outline">Conheça Nossa Abordagem</a>
+                <a href="https://wa.me/5562996653772?text=Ol%C3%A1%2C%20preciso%20de%20informa%C3%A7%C3%B5es%20sobre%20interna%C3%A7%C3%A3o." target="_blank" class="btn btn-primary"><i class="fa-brands fa-whatsapp"></i> Falar no WhatsApp</a>
+                <a href="#contato" class="btn btn-outline">Solicitar avaliação</a>
             </div>
         </div>
     </section>
@@ -70,74 +89,70 @@
     <!-- Quem Somos -->
     <section id="quem-somos" class="section-padding">
         <div class="container grid-2">
-            <div class="about-text">
-                <h2>Viver para Vencer – Comunidade Terapêutica para Recomeços</h2>
-                <p>Somos uma instituição dedicada à recuperação e reintegração social de dependentes químicos e
-                    alcoólatras. Acreditamos que a mudança é possível através de um tratamento humanizado, espiritual e
-                    disciplinar.</p>
-                <p>Nossa equipe multidisciplinar oferece suporte integral, garantindo que cada residente receba o
-                    cuidado necessário para reconstruir sua vida com dignidade e propósito.</p>
+            <div class="about-text fade-in-section">
+                <h2>Nossa História e Propósito</h2>
+                <p>A <strong>Comunidade Terapêutica Viver para Vencer</strong> nasceu do desejo de salvar vidas afetadas pela dependência química e pelo alcoolismo. Nosso foco é oferecer mais do que um tratamento: proporcionamos um verdadeiro recomeço.</p>
+                <p>Nossa <strong>missão</strong> é resgatar a dignidade humana, apoiando não apenas o paciente, mas toda a família. Trabalhamos com <strong>valores</strong> sólidos de respeito, amor ao próximo e responsabilidade.</p>
                 <ul class="check-list">
-                    <li><i class="fa-solid fa-check"></i> Equipe Multidisciplinar Especializada</li>
-                    <li><i class="fa-solid fa-check"></i> Ambiente Seguro e Acolhedor</li>
-                    <li><i class="fa-solid fa-check"></i> Apoio Familiar Contínuo</li>
+                    <li><i class="fa-solid fa-check"></i> Tratamento humanizado e acolhedor</li>
+                    <li><i class="fa-solid fa-check"></i> Resgate da espiritualidade e esperança</li>
+                    <li><i class="fa-solid fa-check"></i> Disciplina estruturada para um novo começo</li>
                 </ul>
             </div>
-            <div class="about-image">
+            <div class="about-image fade-in-section">
                 <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                    alt="Equipe Viver para Vencer"
+                    alt="comunidade terapêutica tratamento dependência química"
                     style="border-radius: 10px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
             </div>
         </div>
     </section>
 
-    <!-- Abordagem Terapêutica -->
-    <section id="abordagem" class="section-padding bg-light">
+    <!-- Tratamento Dependencia Quimica -->
+    <section id="tratamento-dependencia-quimica" class="section-padding bg-light">
         <div class="container">
-            <div class="section-header text-center">
-                <h2>Nossa Abordagem Terapêutica</h2>
-                <p>O tratamento é baseado em pilares fundamentais para a recuperação física, mental e espiritual.</p>
+            <div class="section-header text-center fade-in-section">
+                <h2>Tratamento para Dependência Química</h2>
+                <p>Como funciona o nosso acompanhamento para a plena recuperação e reinserção social.</p>
             </div>
             <div class="cards-grid">
-                <div class="card">
+                <div class="card fade-in-section">
                     <div class="icon-box"><i class="fa-solid fa-shield-heart"></i></div>
-                    <h3>Internação Protegida</h3>
-                    <p>Segurança e monitoramento 24h para garantir a integridade e o foco no tratamento durante a fase
-                        de desintoxicação.</p>
+                    <h3>Internação protegida</h3>
+                    <p>Ambiente seguro e monitorado para garantir a integridade física e mental do paciente durante a desintoxicação.</p>
                 </div>
-                <div class="card">
+                <div class="card fade-in-section">
+                    <div class="icon-box"><i class="fa-solid fa-stethoscope"></i></div>
+                    <h3>Acompanhamento terapêutico</h3>
+                    <p>Profissionais capacitados trabalhando na conscientização e terapia contínua para evitar recaídas.</p>
+                </div>
+                <div class="card fade-in-section">
                     <div class="icon-box"><i class="fa-solid fa-church"></i></div>
                     <h3>Espiritualidade</h3>
-                    <p>Resgate da fé e dos valores, respeitando todas as crenças, como base para fortalecer o propósito
-                        de vida.</p>
+                    <p>Programa de fortalecimento interior, base fundamental para o resgate do propósito e sentido da vida.</p>
                 </div>
-                <div class="card">
+                <div class="card fade-in-section">
                     <div class="icon-box"><i class="fa-solid fa-seedling"></i></div>
                     <h3>Laborterapia</h3>
-                    <p>Atividades práticas que desenvolvem disciplina, responsabilidade e o senso de utilidade e
-                        cooperação.</p>
+                    <p>Atividades práticas que desenvolvem o senso de responsabilidade, cooperação e disciplina diária.</p>
                 </div>
-                <div class="card">
+                <div class="card fade-in-section" style="grid-column: 1 / -1; max-width: 500px; margin: 0 auto;">
                     <div class="icon-box"><i class="fa-solid fa-people-roof"></i></div>
-                    <h3>Apoio à Família</h3>
-                    <p>Orientação e suporte constante aos familiares, fundamentais no processo de recuperação e
-                        reinserção social.</p>
+                    <h3>Apoio à família</h3>
+                    <p>Acolhimento familiar constante, pois sabemos que a recuperação do dependente também cura a família.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Internações Involuntárias -->
-    <section id="internacoes" class="section-padding">
+    <!-- Internação Involuntária -->
+    <section id="internacao-involuntaria" class="section-padding">
         <div class="container">
-            <div class="legal-box">
+            <div class="legal-box fade-in-section">
                 <div class="legal-content">
-                    <h2>Internações Involuntárias: Um Ato de Amor e Proteção</h2>
-                    <h3>Especialistas em internações com respaldo legal e humano.</h3>
-                    <p>A internação involuntária é um recurso legal (Lei 10.216/2001) para salvar vidas quando o
-                        dependente perdeu a capacidade de decidir por si mesmo devido ao uso de substâncias. Realizamos
-                        este procedimento com total ética, segurança e humanização.</p>
-                    <a href="#contato" class="btn btn-primary">Solicitar Avaliação Agora</a>
+                    <h2>Internação Involuntária</h2>
+                    <h3>Um ato de amor amparado pela Lei 10.216/2001</h3>
+                    <p>Sabemos que muitas vezes a dependência química cega o paciente para a necessidade de ajuda. A internação involuntária é um recurso legal rigoroso, focado na segurança do paciente e no apoio irrestrito à família quando o uso de drogas e álcool coloca a vida em risco iminente.</p>
+                    <a href="https://wa.me/5562996653772?text=Ol%C3%A1%2C%20preciso%20de%20informa%C3%A7%C3%B5es%20sobre%20interna%C3%A7%C3%A3o%20involunt%C3%A1ria." target="_blank" class="btn btn-primary">Solicitar orientação</a>
                 </div>
                 <div class="legal-icon">
                     <i class="fa-solid fa-scale-balanced"></i>
@@ -146,84 +161,109 @@
         </div>
     </section>
 
-    <!-- Depoimentos -->
-    <section id="depoimentos" class="section-padding bg-light">
+    <!-- Estrutura da comunidade -->
+    <section id="comunidade-terapeutica" class="section-padding bg-light">
         <div class="container">
-            <div class="section-header text-center">
-                <h2>Histórias de Transformação</h2>
-                <p>Veja o que famílias e ex-acolhidos dizem sobre a Viver para Vencer.</p>
+            <div class="section-header text-center fade-in-section">
+                <h2>Estrutura da Comunidade Terapêutica</h2>
+                <p>Um ambiente devidamente equipado e planejado para a reconstrução de vidas em contato com a natureza.</p>
+            </div>
+            
+            <!-- Swiper Carousel -->
+            <div class="swiper structure-swiper fade-in-section">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="gallery-item" style="background-image: url('https://i.ibb.co/nN3j3xPZ/refeitorio-2.webp');">
+                            <span class="gallery-caption">Refeitório Espaçoso</span>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="gallery-item" style="background-image: url('https://i.ibb.co/NgTYKGnp/Quartos.webp');">
+                            <span class="gallery-caption">Quartos Aconchegantes</span>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="gallery-item" style="background-image: url('https://i.ibb.co/m17LCJ5/area-verde.webp');">
+                            <span class="gallery-caption">Área Externa e Verde</span>
+                        </div>
+                    </div>
+                    <!-- Duplicando para encher o carrossel na visualização web -->
+                    <div class="swiper-slide">
+                        <div class="gallery-item" style="background-image: url('https://i.ibb.co/nN3j3xPZ/refeitorio-2.webp');">
+                            <span class="gallery-caption">Reuniões e Convivência</span>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="gallery-item" style="background-image: url('https://i.ibb.co/NgTYKGnp/Quartos.webp');">
+                            <span class="gallery-caption">Acomodações</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="swiper-pagination"></div>
+                
+                <div class="swiper-button-prev" style="color: var(--primary-green);"></div>
+                <div class="swiper-button-next" style="color: var(--primary-green);"></div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Depoimentos -->
+    <section id="depoimentos" class="section-padding">
+        <div class="container">
+            <div class="section-header text-center fade-in-section">
+                <h2>Relatos de Vida</h2>
+                <p>Nossa maior recompensa é ver famílias sorrindo novamente.</p>
             </div>
             <div class="testimonials-grid">
-                <div class="testimonial-card">
-                    <p>"Eu não via mais saída para meu filho. A Viver para Vencer devolveu a esperança para nossa
-                        família. Hoje ele está limpo e trabalhando."</p>
+                <div class="testimonial-card fade-in-section">
+                    <p>"Meu filho voltou a viver. A comunidade mudou nossa família. Hoje temos paz em casa e esperança no coração."</p>
                     <cite>- Maria S., Mãe</cite>
                 </div>
-                <div class="testimonial-card">
-                    <p>"Fui acolhido com respeito quando cheguei sem nada. A disciplina e a espiritualidade mudaram
-                        minha visão de mundo."</p>
-                    <cite>- T.A., Ex-acolhido</cite>
+                <div class="testimonial-card fade-in-section">
+                    <p>"Fui acolhido com respeito quando cheguei sem nada. A disciplina e a espiritualidade mudaram a forma como vejo o mundo e a mim mesmo."</p>
+                    <cite>- T. R., Ex-acolhido</cite>
                 </div>
-                <div class="testimonial-card">
-                    <p>"Profissionais excelentes que realmente se importam. A estrutura é ótima e o contato com a
-                        natureza ajuda muito."</p>
-                    <cite>- João P., Irmão de paciente</cite>
+                <div class="testimonial-card fade-in-section">
+                    <p>"Equipe atenta e dedicada. Confiei meu familiar aos cuidados da Viver para Vencer e o tratamento humanizado tem feito toda a diferença."</p>
+                    <cite>- Ana P., Esposa</cite>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Estrutura Física -->
-    <section id="estrutura" class="section-padding">
-        <div class="container">
-            <div class="section-header text-center">
-                <h2>Nossa Estrutura</h2>
-                <p>Um ambiente preparado para o acolhimento e a recuperação.</p>
-            </div>
-            <div class="gallery-grid">
-                <div class="gallery-item" style="background-image: url('https://i.ibb.co/nN3j3xPZ/refeitorio-2.webp');">
-                    <span class="gallery-caption">Refeitório</span>
-                </div>
-                <div class="gallery-item" style="background-image: url('https://i.ibb.co/NgTYKGnp/Quartos.webp');">
-                    <span class="gallery-caption">Quartos</span>
-                </div>
-                <div class="gallery-item" style="background-image: url('https://i.ibb.co/m17LCJ5/area-verde.webp');">
-                    <span class="gallery-caption">Área Verde</span>
-                </div>
-                <div class="gallery-item"
-                    style="background-image: url('https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80');">
-                    <span class="gallery-caption">Sala de Reuniões</span>
-                </div>
-                <div class="gallery-item" style="background-image: url('https://i.ibb.co/PvZT2vX1/Espa-o.png');">
-                    <span class="gallery-caption">Espaço Ecumênico</span>
-                </div>
-                <div class="gallery-item" style="background-image: url('https://i.ibb.co/9P7TDYj/Horta.png');">
-                    <span class="gallery-caption">Horta</span>
-                </div>
+    <!-- CTA Principal Pre-Footer -->
+    <section class="pre-footer-cta bg-primary section-padding">
+        <div class="container text-center fade-in-section">
+            <h2 style="color: white; margin-bottom: 20px; font-size: 2.5rem;">Precisa de ajuda agora?</h2>
+            <p style="color: rgba(255,255,255,0.9); font-size: 1.2rem; margin-bottom: 40px;">Nossa equipe de especialistas está de plantão para acolher sua solicitação com respeito e sigilo absoluto.</p>
+            <div class="hero-buttons">
+                <a href="https://wa.me/5562996653772?text=Ol%C3%A1%2C%20preciso%20de%20informa%C3%A7%C3%B5es%20sobre%20interna%C3%A7%C3%A3o." target="_blank" class="btn btn-outline" style="border-radius: 50px;"><i class="fa-brands fa-whatsapp" style="font-size: 1.2rem;"></i> Chamar no WhatsApp</a>
+                <a href="tel:11917229110" class="btn btn-primary btn-alt"><i class="fa-solid fa-phone"></i> Ligar: (11) 91722-9110</a>
             </div>
         </div>
     </section>
 
-    <!-- Contato -->
+    <!-- Contato e Formulário -->
     <section id="contato" class="section-padding bg-accent">
         <div class="container grid-2">
-            <div class="contact-info">
+            <div class="contact-info fade-in-section">
                 <h2>Fale Conosco</h2>
-                <p>Estamos prontos para atender você 24h. Tire suas dúvidas ou solicite uma avaliação.</p>
+                <p>Tire suas dúvidas ou solicite uma avaliação presencial em nossa Clínica de Recuperação.</p>
                 <ul class="contact-list">
-                    <li><i class="fa-brands fa-whatsapp"></i> <a href="https://wa.me/5562996653772" target="_blank">(62) 99665-3772</a></li>
-                    <li><i class="fa-solid fa-phone"></i> (11) 91722-9110</li>
+                    <li><i class="fa-brands fa-whatsapp"></i> <a href="https://wa.me/5562996653772?text=Ol%C3%A1%2C%20preciso%20de%20informa%C3%A7%C3%B5es%20sobre%20interna%C3%A7%C3%A3o." target="_blank">(62) 99665-3772</a></li>
+                    <li><i class="fa-solid fa-phone"></i> <a href="tel:11917229110">(11) 91722-9110</a></li>
                     <li><i class="fa-solid fa-envelope"></i> contato@viverparavencer.com.br</li>
-                    <li><i class="fa-solid fa-location-dot"></i> Rua Vicinal 3, Chácaras Vargem Bonita II, Senador Canedo - GO, CEP: 75263-445</li>
+                    <li><i class="fa-solid fa-location-dot"></i> Rua Vicinal 3, Chácaras Vargem Bonita II, Senador Canedo - GO</li>
                 </ul>
                 <div class="map-container">
-                    <!-- Placeholder map -->
                     <iframe
                         src="https://maps.google.com/maps?q=-16.7596531,-49.0860776&hl=pt-BR&z=16&output=embed"
                         width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                 </div>
             </div>
-            <div class="contact-form-wrapper">
+            <div class="contact-form-wrapper fade-in-section">
                 <form id="contact-form">
                     <h3>Envie uma mensagem</h3>
                     <div class="form-group">
@@ -247,7 +287,7 @@
                         <label for="message">Mensagem</label>
                         <textarea id="message" name="message" rows="4" placeholder="Como podemos ajudar?"></textarea>
                     </div>
-                    <button type="submit" class="btn btn-full">Enviar Mensagem</button>
+                    <button type="submit" class="btn btn-full">Solicitar Avaliação</button>
                 </form>
             </div>
         </div>
@@ -255,37 +295,44 @@
 
     <!-- Footer -->
     <footer>
-        <div class="container footer-content">
+        <div class="container footer-content fade-in-section">
             <div class="footer-logo">
-                <img src="https://i.ibb.co/KjGckLXF/comunidade-terapeutica-viverpvencer.webp" alt="Viver para Vencer" style="height: 100px; width: auto; margin-bottom: 15px; max-width: 300px;">
-                <p>Transformamos vidas. Restauramos famílias.</p>
+                <img src="https://i.ibb.co/KjGckLXF/comunidade-terapeutica-viverpvencer.webp" alt="Viver para Vencer Clínica de Recuperação" style="height: 100px; width: auto; margin-bottom: 15px; max-width: 300px;">
+                <p>Transformamos vidas. Restauramos famílias e garantimos recomeços dignos por meio de tratamento de dependência química estruturado.</p>
             </div>
             <div class="footer-links">
                 <h4>Links Rápidos</h4>
                 <ul>
                     <li><a href="#hero">Início</a></li>
-                    <li><a href="#quem-somos">Quem Somos</a></li>
-                    <li><a href="#internacoes">Internações</a></li>
-                    <li><a href="#contato">Contato</a></li>
+                    <li><a href="#quem-somos">Comunidade Terapêutica</a></li>
+                    <li><a href="#internacao-involuntaria">Internação Involuntária</a></li>
+                    <li><a href="#contato">Solicitar Avaliação</a></li>
+                    <li><a href="#">Política de Privacidade</a></li>
+                    <li><a href="#">Termos de Uso</a></li>
                 </ul>
             </div>
             <div class="footer-social">
-                <h4>Siga-nos</h4>
-                <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <h4>Fale Agora</h4>
+                <ul class="contact-list" style="margin-top: 0;">
+                    <li style="color: white; font-size: 1rem; margin-bottom: 10px;"><i class="fa-brands fa-whatsapp" style="width: 30px; height: 30px; font-size: 0.9rem;"></i> (62) 99665-3772</li>
+                    <li style="color: white; font-size: 1rem; margin-bottom: 10px;"><i class="fa-solid fa-phone" style="width: 30px; height: 30px; font-size: 0.9rem;"></i> (11) 91722-9110</li>
+                    <li style="color: white; font-size: 1rem;"><i class="fa-solid fa-location-dot" style="width: 30px; height: 30px; font-size: 0.9rem;"></i> Senador Canedo - GO</li>
+                </ul>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2026 Viver para Vencer. Todos os direitos reservados.</p>
+            <p>&copy; 2026 Comunidade Terapêutica Viver para Vencer. Todos os direitos reservados.</p>
         </div>
     </footer>
 
     <!-- WhatsApp Float Button -->
-    <a href="https://wa.me/5562996653772" class="whatsapp-float" target="_blank" title="Fale conosco no WhatsApp">
+    <a href="https://wa.me/5562996653772?text=Ol%C3%A1%2C%20preciso%20de%20informa%C3%A7%C3%B5es%20sobre%20interna%C3%A7%C3%A3o." class="whatsapp-float" target="_blank" title="Fale conosco no WhatsApp">
         <i class="fa-brands fa-whatsapp"></i>
     </a>
 
-    <script src="js/script.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="js/script.js?v=2"></script>
 </body>
 
 </html>
